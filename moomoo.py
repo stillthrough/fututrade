@@ -123,7 +123,8 @@ def get_historical_trades (instance, trade_acc_id
     # 1.1 - Drop counter_broker information as not needed
     trades_df = trades_df.drop(columns = ['counter_broker_id', 'counter_broker_name'])
     # 1.2 - Assign new column names that are easier to understand
-    new_col_names = ['ticker', 'name', 'deal_id', 'order_id', 'size', 'price'                         , 'direction','trade_time', 'trade_status']
+    new_col_names = ['ticker', 'name', 'deal_id', 'order_id', 'size', 'price', 
+                                        'direction','trade_time', 'trade_status']
     trades_df.columns = new_col_names
 
 
